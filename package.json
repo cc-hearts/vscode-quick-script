@@ -1,7 +1,7 @@
 {
   "name": "@cc-hearts/quick-script",
   "displayName": "quick-script",
-  "description": "a plug-in that executes immediately when a project starts",
+  "description": "a plugin that executes script immediately when a project starts",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.90.0"
