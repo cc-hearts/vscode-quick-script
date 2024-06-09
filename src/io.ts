@@ -1,6 +1,7 @@
 import { workspace } from "vscode";
 import { resolve } from 'path'
 import { existsSync, readFileSync } from "fs";
+import { Config } from "./helper";
 
 function getConfigPath() {
   const workspaceFolders = workspace.workspaceFolders
@@ -12,7 +13,7 @@ function getConfigPath() {
   return resolve(uri.fsPath, '.vscode', 'quick-script.json')
 }
 
-export function readConfig() {
+export function readConfig(): Config | undefined {
   const rootPath = getConfigPath();
   if (!rootPath)
     return
